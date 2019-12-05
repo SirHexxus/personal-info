@@ -1,0 +1,49 @@
+<div id="home">
+  <div class="container">
+    <div class="row">
+      <div class="col-8 offset-2">
+        <h1>{{msg}}</h1>
+        <h2>This is the JMS Web Designs Admin Page</h2>
+        <form class="clearfix mb-4" action="POST">
+          <div class="form-group">
+            <label for="project-title">Project Title</label>
+            <input type="text" id="project-title" class="form-control" aria-describedby="project-title" placeholder="Enter Project Title">
+          </div>
+          <div class="form-group">
+            <label for="project-description">Project Description</label>
+            <textarea class="form-control" id="project-description" aria-describedby="project-description" placeholder="Enter Project Description"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="project-repo">Project Repository URL</label>
+            <input type="text" id="project-repo" class="form-control" aria-describedby="project-repo" placeholder="Enter The Repository URL">
+          </div>
+          <div class="form-group">
+            <label for="project-deployed">Project Deployed URL</label>
+            <input type="text" id="project-deployed" class="form-control" aria-describedby="project-deployed" placehholder="Enter The Deployed URL">
+          </div>
+          <div class="form-group">
+            <label for="project-image">Project Image URL</label>
+            <input type="text" id="project-image" class="form-control" aria-describedby="project-image" placeholder="Enter The Project Image URL">
+          </div>
+          <div class="form-group">
+            <label for="project-alt-text">Project Image Alt-Text</label>
+            <input type="text" id="project-alt-text" class="form-control" aria-describedby="project-alt-text" placeholder="Describe the Project Image Briefly">
+          </div>
+          <button id="submit" class="btn btn-primary float-right">Submit</button>
+        </form>
+        <h3>Projects:</h3>
+        <ul id="project-list" class="list-group">
+          {{#each projects}}
+          <li data-id="{{this.id}}" class="list-group-item">
+            <a href="project/{{this.id}}">{{this.title}}</a>
+            <button class="btn btn-danger float-right delete">ｘ</button>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
