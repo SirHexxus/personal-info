@@ -1,3 +1,7 @@
+body {
+  text-align: center;
+}
+
 .list-group-item {
   line-height: 2.5;
 }
