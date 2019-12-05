@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-8 offset-2">
+      <div class="card mt-4">
+        <div class="card-body">
+          <h5 class="card-title">Project</h5>
+          <p>
+            <strong>ID</strong>: {{project.id}}
+          </p>
+          <img src="{{project.image}}" alt="{{project.imgText}}">
+          <p>
+            <strong>Title</strong>: {{project.title}}
+          </p>
+          <p>
+            <strong>Description:</strong> {{project.description}}
+          </p>
+          {{#if project.deployedURL}}
+            <a href="{{project.deployedURL}}">See It Live</a><br>
+          {{/if}}
+          <a href="{{project.repoURL}}">See The Source Code</a><br>
+          <a href="/">← Back To Home</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
