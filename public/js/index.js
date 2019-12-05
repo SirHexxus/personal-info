@@ -1,51 +1,59 @@
 // Get references to page elements
-var $exampleText = $("#example-text");
-var $exampleDescription = $("#example-description");
-var $submitBtn = $("#submit");
-var $exampleList = $("#example-list");
+const $projectTitle = $("#project-title");
+const $projectDescription = $("#project-description");
+const $projectRepo = $("#project-repo");
+const $projectDeployed = $("#project-deployed");
+const $projectImage = $("#project-image");
+const $projectAltText = $("#project-alt-text");
+const $submitBtn = $("#submit");
+const $projectList = $("#project-list");
+
+let project;
+let idToDelete;
 
 // The API object contains methods for each kind of request we'll make
-var API = {
-  saveExample: function(example) {
+const API = {
+  saveProject: project => {
     return $.ajax({
       headers: {
         "Content-Type": "application/json"
       },
       type: "POST",
-      url: "api/examples",
-      data: JSON.stringify(example)
+      url: "/api/projects",
+      data: JSON.stringify(project)
     });
   },
-  getExamples: function() {
+  getProjects: () => {
     return $.ajax({
-      url: "api/examples",
+      url: "api/projects",
       type: "GET"
     });
   },
-  deleteExample: function(id) {
+  deleteProject: id => {
     return $.ajax({
-      url: "api/examples/" + id,
+      url: "/api/projects/" + id,
       type: "DELETE"
     });
   }
 };
 
-// refreshExamples gets new examples from the db and repopulates the list
-var refreshExamples = function() {
-  API.getExamples().then(function(data) {
-    var $examples = data.map(function(example) {
-      var $a = $("<a>")
-        .text(example.text)
-        .attr("href", "/example/" + example.id);
+// refreshProjects gets new projects from the db and repopulates the list
+const refreshProjects = () => {
+  console.log("Refreshing Project List");
+  API.getProjects().then(data => {
+    const $projects = data.map(project => {
+      const $a = $("<a>")
+        .text(project.title)
+        .attr("href", "/project/" + project.id);
 
-      var $li = $("<li>")
+      const $li = $("<li>")
         .attr({
           class: "list-group-item",
-          "data-id": example.id
+          "data-id": project.id
         })
         .append($a);
 
-      var $button = $("<button>")
+      const $button = $("<button>")
         .addClass("btn btn-danger float-right delete")
         .text("ｘ");
 
@@ -54,46 +62,56 @@ var refreshExamples = function() {
       return $li;
     });
 
-    $exampleList.empty();
-    $exampleList.append($examples);
+    $projectList.empty();
+    $projectList.append($projects);
   });
 };
 
-// handleFormSubmit is called whenever we submit a new example
-// Save the new example to the db and refresh the list
-var handleFormSubmit = function(event) {
+// handleFormSubmit is called whenever we submit a new project
+// Save the new project to the db and refresh the list
+const handleFormSubmit = event => {
   event.preventDefault();
 
-  var example = {
-    text: $exampleText.val().trim(),
-    description: $exampleDescription.val().trim()
+  console.log("Button Clicked");
+
+  project = {
+    title: $projectTitle.val().trim(),
+    description: $projectDescription.val().trim(),
+    repoURL: $projectRepo.val().trim(),
+    deployedURL: $projectDeployed.val().trim(),
+    image: $projectImage.val().trim(),
+    imageText: $projectAltText.val().trim()
   };
 
-  if (!(example.text && example.description)) {
-    alert("You must enter an example text and description!");
+  if (!(project.title && project.description)) {
+    alert("You must enter a project title and description!");
     return;
   }
 
-  API.saveExample(example).then(function() {
-    refreshExamples();
-  });
+  API.saveProject(project).then(() => {
+    refreshProjects();
 
-  $exampleText.val("");
-  $exampleDescription.val("");
+    console.log("Project Saved");
+
+    $projectTitle.val("");
+    $projectDescription.val("");
+    $projectRepo.val("");
+    $projectDeployed.val("");
+    $projectImage.val("");
+    $projectAltText.val("");
+  });
 };
 
-// handleDeleteBtnClick is called when an example's delete button is clicked
-// Remove the example from the db and refresh the list
-var handleDeleteBtnClick = function() {
-  var idToDelete = $(this)
+// handleDeleteBtnClick is called when an project's delete button is clicked
+// Remove the project from the db and refresh the list
+const handleDeleteBtnClick = function() {
+  idToDelete = $(this)
     .parent()
     .attr("data-id");
 
-  API.deleteExample(idToDelete).then(function() {
-    refreshExamples();
-  });
+  API.deleteProject(idToDelete).then(() => refreshProjects());
 };
 
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
-$exampleList.on("click", ".delete", handleDeleteBtnClick);
+$projectList.on("click", ".delete", handleDeleteBtnClick);
