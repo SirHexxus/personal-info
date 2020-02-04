@@ -1,0 +1,21 @@
+//  Define our mixins
+@mixin flexing($direction, $vertAlign, $horiAlign ) {
+    display : flex;
+    flex-direction : $direction;
+    align-items : $vertAlign;
+    justify-content: $horiAlign;
+}
+
+@mixin flexCol($vertAlign, $horiAlign) {
+    display : flex;
+    flex-direction : column;
+    align-items : $vertAlign;
+    justify-content: $horiAlign;
+}
+
+@mixin flexRow($vertAlign, $horiAlign) {
+    display : flex;
+    flex-direction : row;
+    align-items : $vertAlign;
+    justify-content: $horiAlign;
+}

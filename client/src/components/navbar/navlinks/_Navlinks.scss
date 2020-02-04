@@ -1,0 +1,21 @@
+//  Defines the Style Rules for the Navlinks component
+
+//  Import General Styles
+@import '../../../styles/colors';
+@import '../../../styles/mixins';
+
+//  Begin Style Definitions
+.linkList {
+    @include flexing(row, center, space-between);
+    width : 25%;
+    height: 100%;
+    margin : 1rem;
+    .flexItem {
+        @include flexing(column, center, space-between);
+        flex-grow : 1;
+    }
+}
+
+a {
+    color : $lightShade;
+}

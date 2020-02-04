@@ -1,0 +1,155 @@
+@import 'styles/colors';
+@import 'styles/mixins';
+@import 'styles/fonts';
+
+@import 'components/navbar/nav/Nav';
+@import 'components/footer/footer/Footer';
+@import 'components/index/personalText/PersonalText';
+
+body {
+	background: $lightShade;
+	// background-image: url('./images/bioPic.png');
+	// background-position: left; /* Center the image */
+	// background-repeat: no-repeat; /* Do not repeat the image */
+	color: $darkShade;
+	font-family: $plainType;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $fancyType;
+}
+
+hr {
+	width: 100%;
+	border-style: solid;
+	border-width: 1px;
+}
+
+.App {
+	@include flexing(column, center, center);
+}
+
+.pageRow {
+	height: 100vh;
+	@include flexing(row, center, space-around);
+	margin-top: 10rem;
+}
+
+.pageCol {
+	height: 100vh;
+	@include flexing(column, center, space-around);
+	margin-top: 10rem;
+}
+
+.flexContainer {
+	@include flexing(row, center, space-around);
+	margin-top: 10rem;
+}
+
+.flexCol {
+	@include flexing(column, center, space-around);
+	margin: 3rem;
+}
+
+.flexRow {
+	@include flexing(row, center, space-around);
+	margin: 3rem;
+}
+
+.bioPic {
+	height: auto;
+	max-height: 55rem;
+	width: auto;
+	box-shadow: 0 0.2rem 0.4rem 0 $darkShade;
+}
+
+.card {
+	// @include flexing(column, baseline, center);
+	box-shadow: 0 0.2rem 0.4rem 0 $darkShade;
+	padding: 1rem;
+	margin: 5rem;
+	opacity: 0.85;
+}
+
+.jumbotron {
+	@include flexing(row, center, center);
+	font-size: 3rem;
+	overflow: hidden;
+	width: 100vw;
+	margin: 0;
+	min-height: 4rem;
+	height: 15%;
+	position: absolute;
+	left: 0;
+	top: 8rem;
+}
+
+.accentLight {
+	background: $lightAccent;
+	color: $darkShade;
+	a {
+		color: $darkShade;
+	}
+	hr {
+		border-color: $darkShade;
+	}
+	.fab,
+	.fas {
+		color: $brandColor;
+	}
+}
+
+.accentDark {
+	background: $darkAccent;
+	color: $lightShade;
+	a {
+		color: $lightShade;
+	}
+	hr {
+		border-color: $lightShade;
+	}
+	.fab,
+	.fas {
+		color: $lightShade;
+	}
+}
+
+.dark {
+	background: $darkShade;
+	color: $lightShade;
+	a {
+		color: $lightShade;
+	}
+	hr {
+		border-color: $lightAccent;
+	}
+	.fab,
+	.fas {
+		color: $lightShade;
+	}
+}
+
+.light {
+	background: $lightShade;
+	color: $darkShade;
+	a {
+		color: $darkShade;
+	}
+	hr {
+		border-color: $darkAccent;
+	}
+	.fab,
+	.fas {
+		color: $brandColor;
+	}
+}
+
+.brand {
+	color: $brandColor;
+	font-family: $fancyType;
+}

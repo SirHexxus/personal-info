@@ -1,0 +1,22 @@
+//  Defines the Style Rules for the Nav component
+
+//  Import General Styles
+@import '../../../styles/colors';
+@import '../../../styles/mixins';
+
+//  Import Sub Elements
+@import '../navBrand/NavBrand';
+@import '../navlinks/Navlinks';
+
+//  Begin Style Definitions
+.nav {
+    @include flexing(row, center, space-between);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: $darkShade;
+    color: $brandColor;
+    z-index: 10;
+    border-bottom: 3px solid $brandColor;
+}

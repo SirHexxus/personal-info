@@ -1,0 +1,187 @@
+/* 
+Main brand color
+
+This color should be eye-catching but not harsh. It can be liberally applied to your layout as its main identity. 
+*/
+/* 
+Light shade
+
+Use this color as the background for your dark-on-light designs, or the text color of an inverted design. 
+*/
+/* 
+Dark shade
+
+Use as the text color for dark-on-light designs, or as the background for inverted designs.
+*/
+/* 
+Light accent
+
+Accent colors can be used to bring attention to design elements by contrasting with the rest of the palette.
+*/
+/* 
+Dark accent
+
+Another accent color to consider. Not all colors have to be used - sometimes a simple color scheme works best.
+*/
+/* 
+Main brand color
+
+This color should be eye-catching but not harsh. It can be liberally applied to your layout as its main identity. 
+*/
+/* 
+Light shade
+
+Use this color as the background for your dark-on-light designs, or the text color of an inverted design. 
+*/
+/* 
+Dark shade
+
+Use as the text color for dark-on-light designs, or as the background for inverted designs.
+*/
+/* 
+Light accent
+
+Accent colors can be used to bring attention to design elements by contrasting with the rest of the palette.
+*/
+/* 
+Dark accent
+
+Another accent color to consider. Not all colors have to be used - sometimes a simple color scheme works best.
+*/
+/* 
+Main brand color
+
+This color should be eye-catching but not harsh. It can be liberally applied to your layout as its main identity. 
+*/
+/* 
+Light shade
+
+Use this color as the background for your dark-on-light designs, or the text color of an inverted design. 
+*/
+/* 
+Dark shade
+
+Use as the text color for dark-on-light designs, or as the background for inverted designs.
+*/
+/* 
+Light accent
+
+Accent colors can be used to bring attention to design elements by contrasting with the rest of the palette.
+*/
+/* 
+Dark accent
+
+Another accent color to consider. Not all colors have to be used - sometimes a simple color scheme works best.
+*/
+.navBrand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border: 0.1rem solid #6f5eaa;
+  background: #0b2a97;
+  color: #e8dddd;
+  height: 5rem;
+  margin: 1rem;
+  padding: 0.5rem;
+}
+
+/* 
+Main brand color
+
+This color should be eye-catching but not harsh. It can be liberally applied to your layout as its main identity. 
+*/
+/* 
+Light shade
+
+Use this color as the background for your dark-on-light designs, or the text color of an inverted design. 
+*/
+/* 
+Dark shade
+
+Use as the text color for dark-on-light designs, or as the background for inverted designs.
+*/
+/* 
+Light accent
+
+Accent colors can be used to bring attention to design elements by contrasting with the rest of the palette.
+*/
+/* 
+Dark accent
+
+Another accent color to consider. Not all colors have to be used - sometimes a simple color scheme works best.
+*/
+.linkList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 25%;
+  height: 100%;
+  margin: 1rem;
+}
+
+.linkList .flexItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+a {
+  color: #e8dddd;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background: #151a17;
+  color: #0b2a97;
+}
+
+body {
+  background: #e8dddd;
+  color: #151a17;
+}
+/*# sourceMappingURL=App.css.map */

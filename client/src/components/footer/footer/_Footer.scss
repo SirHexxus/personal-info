@@ -1,0 +1,17 @@
+@import 'styles/colors';
+@import 'styles/mixins';
+@import 'styles/fonts';
+
+.footer {
+    @include flexing(row, center, center);
+    // position: fixed;
+    // left: 0;
+    // bottom: 0;
+    border-top: 3px solid $brandColor;
+    height: 5rem;
+    width: 100%;
+    background: $darkShade;
+    color: $lightShade;
+    text-align: center;
+    font-family: $fancyType;
+}
