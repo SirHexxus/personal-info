@@ -1,3 +1,4 @@
+/* 
 var db = require("../models");
 
 module.exports = app => {
@@ -35,3 +36,4 @@ module.exports = app => {
   // Render 404 page for any unmatched routes
   app.get("*", (req, res) => res.render("404"));
 };
+ */

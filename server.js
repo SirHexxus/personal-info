@@ -1,47 +1,58 @@
-require("dotenv").config();
-var express = require("express");
-var exphbs = require("express-handlebars");
+//  Package Variable Declarations
+const express = require("express");
+const mongoose = require("mongoose");
+const path = require("path");
 
-var db = require("./models");
+//  Package Dependent Variable Declarations
+const app = express();
 
-var app = express();
-var PORT = process.env.PORT || 3000;
+//  Global Variable Declarations
+const PORT = process.env.PORT || 5000;
 
-// Middleware
+//  File Import Variable Declarations
+//  //  Configuration for MongoDB
+const db = require("./config/keys").mongoURI;
+
+//  Middleware Method Calls
+//  //  Allows the creation of nested objects from a query string
 app.use(express.urlencoded({ extended: false }));
+//  //  Recognizes incoming Request Objects as JSON Objects
 app.use(express.json());
-app.use(express.static("public"));
+//  //  Configures MongoDB options to avoid deprication errors
+const configOptions = {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+};
 
-// Handlebars
-app.engine(
-  "handlebars",
-  exphbs({
-    defaultLayout: "main"
-  })
-);
-app.set("view engine", "handlebars");
-
-// Routes
-require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(app);
-
-var syncOptions = { force: false };
-
-// If running a test, set syncOptions.force to true
-// clearing the `testdb`
-if (process.env.NODE_ENV === "test") {
-  syncOptions.force = true;
+//  Production Only Assets
+//  //  Serve static assets if app is in production
+if (process.env.NODE_ENV === "production") {
+  //  //  Set static folder
+  app.use(express.static("client/build"));
+  //  //  GET all relevant information, and send it to where it needs to be
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
 }
 
-// Starting the server, syncing our models ------------------------------------/
-db.sequelize.sync(syncOptions).then(function() {
-  app.listen(PORT, function() {
-    console.log(
-      "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
-      PORT,
-      PORT
-    );
-  });
+// Routes
+app.use("/api/", require("./routes/projectRoutes"));
+
+//  Connections
+//  //  Connecting to MongoDB
+mongoose
+  .connect(db, configOptions)
+  .then(() => console.log("MongoDB Connected..."))
+  .catch(err => console.log(err));
+
+//  //  Starting the server, syncing our models ------------------------------------/
+app.listen(PORT, () => {
+  console.log(
+    "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
+    PORT,
+    PORT
+  );
 });
 
+//  Exports
 module.exports = app;
