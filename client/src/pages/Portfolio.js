@@ -10,18 +10,24 @@ export default class Portfolio extends Component {
 		};
 
 		this.setState = this.setState.bind(this);
-		this.loadProjects = this.loadProjects.bind(this);
+		this.componentDidMount = this.componentDidMount.bind(this);
 	}
 
 	componentDidMount() {
-		this.loadProjects();
+		// this.loadProjects();
+		API.getProjects()
+			.then(res => {
+				console.log(res);
+				this.setState({ projects: res.data });
+			})
+			.catch(err => console.log(err));
 	}
 
-	loadProjects = function() {
+	/* loadProjects = function() {
 		API.getProjects()
 			.then(res => this.setState({ projects: res.data }))
 			.catch(err => console.log(err));
-	};
+	}; */
 
 	/*
       deleteProject = id => {
