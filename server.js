@@ -36,7 +36,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 // Routes
-app.use('/api/', require('./routes/projectRoutes'));
+app.use('/api', require('./routes/projectRoutes'));
 
 //  Connections
 //  //  Connecting to MongoDB
