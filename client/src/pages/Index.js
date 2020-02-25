@@ -1,16 +1,12 @@
-import React from 'react'
-import PersonalText from '../components/index/personalText/PersonalText';
-import bioPic from '../images/bioPic.png';
+import React from 'react';
 
 export default function Index() {
-    return (
-        <div className="pageRow">
-            <img className="bioPic" src={bioPic} alt />
-            <div className="emptySpace" />
-            <div className="card light">
-                <PersonalText />
-            </div>
-            <div className="emptySpace" />
-        </div>
-    )
+	return (
+		<div className='pageCol'>
+			<div className='card dark'>
+				<h1>INDEX PAGE</h1>
+				<h2>This Page is under construction.</h2>
+			</div>
+		</div>
+	);
 }

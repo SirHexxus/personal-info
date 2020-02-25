@@ -3,26 +3,47 @@
 @import 'styles/fonts';
 
 ul {
-    list-style-type: none;
+	list-style-type: none;
 }
 
 .greeting {
-    margin: 0 0 0 25%;
-    opacity: 0.5
+	// margin: 0 0 0 25%;
+	align-content: center;
+	opacity: 0.5;
 }
 
 .name {
-    font-size: 3rem;
-    margin: 1rem 0 1rem 36%;
+	font-size: 3rem;
+	margin: 0;
+	padding-bottom: 0;
+}
+
+.list {
+	width: 33%;
+	li {
+		margin-left: 1rem;
+	}
+}
+
+.info {
+	.fab,
+	.fas {
+		color: $brandColor;
+	}
 }
 
 .social {
-    width: 95%;
-    border-bottom: 0.1rem solid $darkAccent;
-    border-right: 0.5rem solid $darkAccent;
-    padding-bottom: 1rem;
+	// border-bottom: 0.1rem solid $darkAccent;
+	// border-right: 0.5rem solid $darkAccent;
+	padding-bottom: 1rem;
 }
 
 .title {
-    margin: 0 0 2rem 53%;
+	margin: 0 0 2rem 0;
+	span {
+		padding: 0 0.5rem;
+		color: $brandColor;
+		background: $lightShade;
+		border-radius: 0.1rem;
+	}
 }

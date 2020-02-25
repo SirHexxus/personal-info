@@ -1,14 +1,14 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import PersonalText from '../components/index/personalText/PersonalText';
+import bioPic from '../images/bioPic.png';
 
 export default class About extends Component {
-    render() {
-        return (
-            <div className="pageCol">
-                <div className="card dark">
-                    <h1>ABOUT ME PAGE</h1>
-                    <h2>This Page is under construction.</h2>
-                </div>
-            </div>
-        )
-    }
+	render() {
+		return (
+			<div className='pageRow'>
+				<img className='bioPic' src={bioPic} alt />
+				<PersonalText />
+			</div>
+		);
+	}
 }

@@ -3,16 +3,15 @@
 @import '../../../styles/fonts';
 
 .navBrand {
-    @include flexing(row, center, center);
+	@include flexing(row, center, center);
 
-    font-family: $fancyType;
-    border: 0.1rem solid $darkAccent;
-    background : $brandColor;
-    color : $lightShade;
-    height : 5rem;
-    width : 5rem;
-    // width : 25%;
-    margin : 1rem;
-    padding : 0.5rem;
+	font-family: $fancyType;
+	border: 0.1rem solid $darkAccent;
+	background: $brandColor;
+	color: $lightShade;
+	height: 3.5rem;
+	width: 9rem;
+	// width : 25%;
+	margin: 1rem;
+	padding: 0.5rem;
 }
-
