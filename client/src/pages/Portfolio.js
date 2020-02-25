@@ -9,6 +9,7 @@ export default class Portfolio extends Component {
 			projects: []
 		};
 
+		this.setState = this.setState.bind(this);
 		this.loadProjects = this.loadProjects.bind(this);
 	}
 

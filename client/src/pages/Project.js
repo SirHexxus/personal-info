@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import API from '../utils/API';
-import axios from 'axios';
 
 export default class Project extends Component {
 	state = {
