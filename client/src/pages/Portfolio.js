@@ -50,19 +50,20 @@ export default class Portfolio extends Component {
  */
 
 	render() {
+		let { projects } = this.state;
 		return (
 			<div className='pageCol'>
 				<div className='card accentDark jumbotron'>
 					<h1>My Portfolio</h1>
 				</div>
-				{this.state.projects.length ? (
+				{projects.length ? (
 					<div
 						className='card accentLight flexCol'
 						style={{ marginTop: '10rem', width: '90vw' }}
 					>
 						<h1>Projects:</h1>
 						<List>
-							{this.state.projects.map(project => (
+							{projects.map(project => (
 								<ListItem key={project._id} project={project} />
 							))}
 						</List>
