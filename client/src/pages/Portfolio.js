@@ -51,12 +51,13 @@ export default class Portfolio extends Component {
 
 	render() {
 		let { projects } = this.state;
+		console.log(projects);
 		return (
 			<div className='pageCol'>
 				<div className='card accentDark jumbotron'>
 					<h1>My Portfolio</h1>
 				</div>
-				{projects.length ? (
+				{projects.length > 0 ? (
 					<div
 						className='card accentLight flexCol'
 						style={{ marginTop: '10rem', width: '90vw' }}
