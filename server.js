@@ -11,7 +11,6 @@ const PORT = process.env.PORT || 5000;
 
 //  File Import Variable Declarations
 //  //  Configuration for MongoDB
-console.log(process.env);
 const db = require('./config/keys').mongoURI;
 
 //  Middleware Method Calls
