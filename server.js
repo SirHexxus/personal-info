@@ -16,7 +16,7 @@ const db = require('./config/default.json').mongoURI;
 
 //  Middleware Method Calls
 //  //  Allows the creation of nested objects from a query string
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 //  //  Recognizes incoming Request Objects as JSON Objects
 app.use(express.json());
 //  //  Configures MongoDB options to avoid deprication errors
