@@ -3,9 +3,14 @@ import { List, ListItem } from '../components/portfolio/list/List';
 import API from '../utils/API';
 
 export default class Portfolio extends Component {
-	state = {
-		projects: []
-	};
+	constructor(props) {
+		super(props);
+		this.state = {
+			projects: []
+		};
+
+		this.loadProjects = this.loadProjects.bind(this);
+	}
 
 	componentDidMount() {
 		this.loadProjects();
