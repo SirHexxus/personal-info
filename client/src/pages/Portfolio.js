@@ -17,7 +17,7 @@ export default class Portfolio extends Component {
 		this.loadProjects();
 	}
 
-	loadProjects = () => {
+	loadProjects = function() {
 		API.getProjects()
 			.then(res => this.setState({ projects: res.data }))
 			.catch(err => console.log(err));
