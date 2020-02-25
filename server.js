@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 5000;
 
 //  File Import Variable Declarations
 //  //  Configuration for MongoDB
-const db = require('./config/keys').mongoURI;
+const db = require('./config/default.json').mongoURI;
 
 //  Middleware Method Calls
 //  //  Allows the creation of nested objects from a query string
