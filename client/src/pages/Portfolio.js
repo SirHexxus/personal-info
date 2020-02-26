@@ -54,17 +54,20 @@ export default class Portfolio extends Component {
 		console.log(projects);
 		return (
 			<div className='pageCol card portfolio'>
-				<div className='card dark' style={{ marginTop: '3rem' }}>
-					<h1 className='name'>Featured Projects</h1>
-					<h4 className='title'>
-						<span>
-							Please Take A Look At Some of Our Most Recent
-							Projects
-						</span>
-					</h4>
-				</div>
 				{projects.length > 0 ? (
-					<div className='card accentDark flexCol'>
+					<div className='card dark flexCol'>
+						{/* <div
+							className='card accentDark'
+							style={{ marginBottom: 0 }}
+						> */}
+						<h1 className='name'>Featured Projects</h1>
+						<h4 className='title' style={{ marginBottom: 0 }}>
+							<span>
+								Please Take A Look At Some of Our Most Recent
+								Projects
+							</span>
+						</h4>
+						{/* </div> */}
 						<List>
 							{projects.map(project => (
 								<ListItem key={project._id} project={project} />

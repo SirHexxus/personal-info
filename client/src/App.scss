@@ -177,7 +177,7 @@ hr {
 		}
 	}
 	hr {
-		border-color: $darkAccent;
+		border-color: $lightAccent;
 	}
 	.fab,
 	.fas {
@@ -258,7 +258,8 @@ hr {
 .index,
 .services,
 .about,
-.portfolio {
+.portfolio,
+.project {
 	// margin-top: 15rem;
 	background: url('./images/background.png');
 	min-height: 75vh;
