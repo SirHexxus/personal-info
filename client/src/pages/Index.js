@@ -16,10 +16,3 @@ export default function Index() {
 		</div>
 	);
 }
-
-{
-	/* 
-<h1>INDEX PAGE</h1>
-<h2>This Page is under construction.</h2>
-*/
-}
