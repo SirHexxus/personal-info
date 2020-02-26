@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function PersonalText() {
 	return (
-		<div className='card dark flexCol'>
+		<div className='card dark flexCol personal'>
 			<h4 className='greeting'>Hello! My name is:</h4>
 			<h1 className='name'>
 				<strong>James Stacy</strong>

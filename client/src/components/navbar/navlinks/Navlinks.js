@@ -16,9 +16,9 @@ export default function Navlinks() {
 				</li>
 				{/* <li><Link to="/admin">Admin</Link></li> */}
 				{/* <li><Link to="/project">Project</Link></li> */}
-				<li>
+				{/* <li>
 					<Link to='/services'>Services</Link>
-				</li>
+				</li> */}
 				{/* <li><Link to="/nonsense" className='flexItem'>404</Link></li> */}
 			</ul>
 		</>

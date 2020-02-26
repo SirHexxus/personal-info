@@ -33,20 +33,17 @@ hr {
 }
 
 .pageRow {
+	position: relative;
 	height: 100vh;
-	@include flexing(row, center, space-around);
-	margin-top: 10rem;
+	@include flexing(row, center, space-between);
+	margin-top: 5rem;
 }
 
 .pageCol {
+	position: relative;
 	height: 100vh;
 	@include flexing(column, center, space-around);
-	margin-top: 10rem;
-}
-
-.flexContainer {
-	@include flexing(row, center, space-around);
-	margin-top: 10rem;
+	margin-top: 5rem;
 }
 
 .flexCol {
@@ -61,8 +58,9 @@ hr {
 
 .bioPic {
 	height: auto;
-	max-height: 55rem;
+	max-height: 45rem;
 	width: auto;
+	margin-top: 1rem;
 	box-shadow: 0 0.2rem 0.4rem 0 $darkShade;
 	border-radius: 0.5rem;
 }
@@ -71,9 +69,13 @@ hr {
 	// @include flexing(column, baseline, center);
 	box-shadow: 0 0.2rem 0.4rem 0 $darkShade;
 	padding: 1rem;
-	margin: 5rem;
 	opacity: 0.85;
 	border-radius: 0.5rem;
+}
+
+.desc {
+	max-width: 50rem;
+	text-align: center;
 }
 
 .jumbotron {
@@ -94,22 +96,22 @@ hr {
 	color: $darkShade;
 	a {
 		color: $darkShade;
-	}
-	a:link,
-	a:visited {
-		color: $darkShade;
-		text-decoration: none;
-		.fab,
-		.fas {
-			color: $brandColor;
+		&:link,
+		&:visited {
+			color: $darkShade;
+			text-decoration: none;
+			.fab,
+			.fas {
+				color: $brandColor;
+			}
 		}
-	}
-	a:hover,
-	a:active {
-		color: $darkAccent;
-		.fab,
-		.fas {
+		&:hover,
+		&:active {
 			color: $darkAccent;
+			.fab,
+			.fas {
+				color: $darkAccent;
+			}
 		}
 	}
 	hr {
@@ -126,22 +128,22 @@ hr {
 	color: $lightShade;
 	a {
 		color: $lightShade;
-	}
-	a:link,
-	a:visited {
-		color: $lightShade;
-		text-decoration: none;
-		.fab,
-		.fas {
+		&:link,
+		&:visited {
 			color: $lightShade;
+			text-decoration: none;
+			.fab,
+			.fas {
+				color: $lightShade;
+			}
 		}
-	}
-	a:hover,
-	a:active {
-		color: $lightAccent;
-		.fab,
-		.fas {
+		&:hover,
+		&:active {
 			color: $lightAccent;
+			.fab,
+			.fas {
+				color: $lightAccent;
+			}
 		}
 	}
 	hr {
@@ -158,22 +160,22 @@ hr {
 	color: $lightShade;
 	a {
 		color: $lightShade;
-	}
-	a:link,
-	a:visited {
-		color: $lightShade;
-		text-decoration: none;
-		.fab,
-		.fas {
+		&:link,
+		&:visited {
 			color: $lightShade;
+			text-decoration: none;
+			.fab,
+			.fas {
+				color: $lightShade;
+			}
 		}
-	}
-	a:hover,
-	a:active {
-		color: $lightAccent;
-		.fab,
-		.fas {
+		&:hover,
+		&:active {
 			color: $lightAccent;
+			.fab,
+			.fas {
+				color: $lightAccent;
+			}
 		}
 	}
 	hr {
@@ -190,22 +192,22 @@ hr {
 	color: $darkShade;
 	a {
 		color: $darkShade;
-	}
-	a:link,
-	a:visited {
-		color: $darkShade;
-		text-decoration: none;
-		.fab,
-		.fas {
-			color: $brandColor;
+		&:link,
+		&:visited {
+			color: $darkShade;
+			text-decoration: none;
+			.fab,
+			.fas {
+				color: $brandColor;
+			}
 		}
-	}
-	a:hover,
-	a:active {
-		color: $darkAccent;
-		.fab,
-		.fas {
+		&:hover,
+		&:active {
 			color: $darkAccent;
+			.fab,
+			.fas {
+				color: $darkAccent;
+			}
 		}
 	}
 	hr {
@@ -226,24 +228,24 @@ hr {
 		font-family: $plainType;
 		padding: 0.1rem 0.3rem;
 		border-radius: 0.1rem;
-	}
-	a:link,
-	a:visited {
-		color: $lightShade;
-		text-decoration: none;
-		.fab,
-		.fas {
+		&:link,
+		&:visited {
 			color: $lightShade;
+			text-decoration: none;
+			.fab,
+			.fas {
+				color: $lightShade;
+			}
 		}
-	}
-	a:hover,
-	a:active {
-		background: $lightShade;
-		color: $brandColor;
-		.fab,
-		.fas {
+		&:hover,
+		&:active {
 			background: $lightShade;
 			color: $brandColor;
+			.fab,
+			.fas {
+				background: $lightShade;
+				color: $brandColor;
+			}
 		}
 	}
 	hr {

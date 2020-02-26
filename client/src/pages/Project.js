@@ -49,7 +49,7 @@ export default class Project extends Component {
 						</span>
 					</h6>
 					<img src={thePic} alt={title} />
-					<p className='card flexCol light'>
+					<p className='card flexCol light desc'>
 						<strong>Description:</strong> {desc}
 					</p>
 					<ul className='flexCol'>

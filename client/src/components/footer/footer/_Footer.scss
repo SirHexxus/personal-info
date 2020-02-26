@@ -4,9 +4,9 @@
 
 .footer {
 	@include flexing(column, center, center);
-	// position: fixed;
-	// left: 0;
-	// bottom: 0;
+	position: fixed;
+	left: 0;
+	bottom: 0;
 	border-top: 3px solid $darkAccent;
 	height: 5rem;
 	width: 100%;
