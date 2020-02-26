@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
 export default function Services() {
-    return (
-        <div className="pageRow">
-            <h1>SERVICES PAGE</h1>
-        </div>
-    )
+	return (
+		<div className='pageRow card services'>
+			<h1 className='card dark'>SERVICES PAGE</h1>
+		</div>
+	);
 }

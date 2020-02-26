@@ -29,8 +29,8 @@ export default function PersonalText() {
 					<i className='fas fa-phone' /> 1(951) 805-3811
 				</li>
 				<li>
-					<i className='fas fa-envelope' />{' '}
 					<a href='mailto:jamesmichaelstacy@gmail.com'>
+						<i className='fas fa-envelope' />{' '}
 						JamesMichaelStacy@gmail.com
 					</a>
 				</li>
@@ -38,19 +38,18 @@ export default function PersonalText() {
 			<ul className='list social'>
 				<h3>Professional Social Media:</h3>
 				<li>
-					<i className='fab fa-facebook' />{' '}
 					<a href='https://www.facebook.com/jmswebdesigns/'>
-						Facebook
+						<i className='fab fa-facebook' /> Facebook
 					</a>
 				</li>
 				<li>
-					<i className='fab fa-github' />{' '}
-					<a href='https://github.com/SirHexxus'>Github</a>
+					<a href='https://github.com/SirHexxus'>
+						<i className='fab fa-github' /> Github
+					</a>
 				</li>
 				<li>
-					<i className='fab fa-linkedin' />{' '}
 					<a href='https://www.linkedin.com/in/james-m-stacy'>
-						LinkedIn
+						<i className='fab fa-linkedin' /> LinkedIn
 					</a>
 				</li>
 			</ul>

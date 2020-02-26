@@ -41,19 +41,24 @@ export default class Project extends Component {
 				<p>
 					<strong>Description:</strong> {desc}
 				</p>
-				{deployedURL ? (
-					<React.Fragment>
-						<a href={deployedURL}>See It Live</a>
-					</React.Fragment>
-				) : (
-					<React.Fragment>
-						<p>No Deployment Link (See Description)</p>
-					</React.Fragment>
-				)}
-				<br />
-				<a href={repoURL}>See The Source Code</a>
-				<br />
-				<a href='/'>← Back To Home</a>
+				<ul className='flexCol'>
+					{deployedURL ? (
+						<li>
+							<a href={deployedURL}>See It Live</a>
+						</li>
+					) : (
+						<li>
+							<p>No Deployment Link (See Description)</p>
+						</li>
+					)}
+					<li>
+						<a href={repoURL}>See The Source Code</a>
+					</li>
+					<br />
+					<li>
+						<a href='/portfolio'>← Back To Portfolio</a>
+					</li>
+				</ul>
 			</div>
 		);
 	}

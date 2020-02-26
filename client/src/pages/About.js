@@ -5,7 +5,7 @@ import bioPic from '../images/bioPic.png';
 export default class About extends Component {
 	render() {
 		return (
-			<div className='pageRow'>
+			<div className='pageRow card accentLight about'>
 				<img className='bioPic' src={bioPic} alt />
 				<PersonalText />
 			</div>

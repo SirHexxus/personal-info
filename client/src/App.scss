@@ -5,10 +5,11 @@
 @import 'components/navbar/nav/Nav';
 @import 'components/footer/footer/Footer';
 @import 'components/index/personalText/PersonalText';
+@import 'components/portfolio/list/List';
 
 body {
-	background: $lightShade;
-	color: $darkShade;
+	background: $darkShade;
+	color: $lightShade;
 	font-family: $plainType;
 }
 
@@ -94,6 +95,23 @@ hr {
 	a {
 		color: $darkShade;
 	}
+	a:link,
+	a:visited {
+		color: $darkShade;
+		text-decoration: none;
+		.fab,
+		.fas {
+			color: $brandColor;
+		}
+	}
+	a:hover,
+	a:active {
+		color: $darkAccent;
+		.fab,
+		.fas {
+			color: $darkAccent;
+		}
+	}
 	hr {
 		border-color: $darkShade;
 	}
@@ -108,6 +126,23 @@ hr {
 	color: $lightShade;
 	a {
 		color: $lightShade;
+	}
+	a:link,
+	a:visited {
+		color: $lightShade;
+		text-decoration: none;
+		.fab,
+		.fas {
+			color: $lightShade;
+		}
+	}
+	a:hover,
+	a:active {
+		color: $lightAccent;
+		.fab,
+		.fas {
+			color: $lightAccent;
+		}
 	}
 	hr {
 		border-color: $lightShade;
@@ -124,8 +159,25 @@ hr {
 	a {
 		color: $lightShade;
 	}
+	a:link,
+	a:visited {
+		color: $lightShade;
+		text-decoration: none;
+		.fab,
+		.fas {
+			color: $lightShade;
+		}
+	}
+	a:hover,
+	a:active {
+		color: $lightAccent;
+		.fab,
+		.fas {
+			color: $lightAccent;
+		}
+	}
 	hr {
-		border-color: $lightAccent;
+		border-color: $darkAccent;
 	}
 	.fab,
 	.fas {
@@ -139,6 +191,23 @@ hr {
 	a {
 		color: $darkShade;
 	}
+	a:link,
+	a:visited {
+		color: $darkShade;
+		text-decoration: none;
+		.fab,
+		.fas {
+			color: $brandColor;
+		}
+	}
+	a:hover,
+	a:active {
+		color: $darkAccent;
+		.fab,
+		.fas {
+			color: $darkAccent;
+		}
+	}
 	hr {
 		border-color: $darkAccent;
 	}
@@ -149,6 +218,50 @@ hr {
 }
 
 .brand {
-	color: $brandColor;
 	font-family: $fancyType;
+	background: $brandColor;
+	color: $lightShade;
+	a {
+		color: $lightShade;
+		font-family: $plainType;
+		padding: 0.1rem 0.3rem;
+		border-radius: 0.1rem;
+	}
+	a:link,
+	a:visited {
+		color: $lightShade;
+		text-decoration: none;
+		.fab,
+		.fas {
+			color: $lightShade;
+		}
+	}
+	a:hover,
+	a:active {
+		background: $lightShade;
+		color: $brandColor;
+		.fab,
+		.fas {
+			background: $lightShade;
+			color: $brandColor;
+		}
+	}
+	hr {
+		border-color: $lightAccent;
+	}
+	.fab,
+	.fas {
+		color: $lightShade;
+	}
+}
+
+.index,
+.services,
+.about,
+.portfolio {
+	// margin-top: 15rem;
+	background: url('./images/background.png');
+	min-height: 75vh;
+	height: auto;
+	width: 97vw;
 }

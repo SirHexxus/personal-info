@@ -3,31 +3,19 @@ import { List, ListItem } from '../components/portfolio/list/List';
 import API from '../utils/API';
 
 export default class Portfolio extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			projects: []
-		};
-
-		this.setState = this.setState.bind(this);
-		this.componentDidMount = this.componentDidMount.bind(this);
-	}
+	state = {
+		projects: []
+	};
 
 	componentDidMount() {
-		// this.loadProjects();
-		API.getProjects()
-			.then(res => {
-				console.log(res);
-				this.setState({ projects: res.data });
-			})
-			.catch(err => console.log(err));
+		this.loadProjects();
 	}
 
-	/* loadProjects = function() {
+	loadProjects = function() {
 		API.getProjects()
 			.then(res => this.setState({ projects: res.data }))
 			.catch(err => console.log(err));
-	}; */
+	};
 
 	/*
       deleteProject = id => {
@@ -65,16 +53,18 @@ export default class Portfolio extends Component {
 		let { projects } = this.state;
 		console.log(projects);
 		return (
-			<div className='pageCol'>
-				<div className='card accentDark jumbotron'>
-					<h1>My Portfolio</h1>
+			<div className='pageCol card portfolio'>
+				<div className='card dark' style={{ marginTop: '3rem' }}>
+					<h1 className='name'>Featured Projects</h1>
+					<h4 className='title'>
+						<span>
+							Please Take A Look At Some of Our Most Recent
+							Projects
+						</span>
+					</h4>
 				</div>
 				{projects.length > 0 ? (
-					<div
-						className='card accentLight flexCol'
-						style={{ marginTop: '10rem', width: '90vw' }}
-					>
-						<h1>Projects:</h1>
+					<div className='card accentDark flexCol'>
 						<List>
 							{projects.map(project => (
 								<ListItem key={project._id} project={project} />
@@ -82,8 +72,9 @@ export default class Portfolio extends Component {
 						</List>
 					</div>
 				) : (
-					<div className='card light'>
+					<div className='card dark flexCol'>
 						<h3>No Results to Display</h3>
+						<h4>Please Wait for Projects to Load</h4>
 					</div>
 				)}
 			</div>

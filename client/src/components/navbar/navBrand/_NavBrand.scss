@@ -6,12 +6,17 @@
 	@include flexing(row, center, center);
 
 	font-family: $fancyType;
-	border: 0.1rem solid $darkAccent;
-	background: $brandColor;
+	// border: 0.1rem solid $darkAccent;
+	// border-radius: 1.5rem;
+	// background: $brandColor;
 	color: $lightShade;
 	height: 3.5rem;
-	width: 9rem;
+	width: auto;
 	// width : 25%;
 	margin: 1rem;
 	padding: 0.5rem;
+}
+
+.logo {
+	margin: 1rem;
 }

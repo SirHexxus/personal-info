@@ -13,13 +13,17 @@ export function List({ children }) {
 
 export function ListItem({ project }) {
 	return (
-		<li className='list-group-item'>
-			<div className='card light'>
-				<Link to={`/project/${project._id}`} className='flexCol'>
+		<li>
+			<Link
+				to={`/project/${project._id}`}
+				className='card dark flexCol project'
+			>
+				<img src={project.image} alt='' />
+				<h2>
 					<strong>{project.title}</strong>
-					<img src={project.image} alt='' />
-				</Link>
-			</div>
+				</h2>
+				<p style={{ textAlign: 'center' }}>{project.description}</p>
+			</Link>
 		</li>
 	);
 }

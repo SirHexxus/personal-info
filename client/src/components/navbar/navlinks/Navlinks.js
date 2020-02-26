@@ -2,19 +2,25 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Navlinks() {
-    return (
-        <div className="linkList">
-            <div className="flexItem">
-                <Link to="/">Home</Link>
-                <Link to="/portfolio">Portfolio</Link>
-                {/* <Link to="/admin">Admin</Link> */}
-            </div>
-            <div className="flexItem">
-                {/* <Link to="/project">Project</Link> */}
-                <Link to="/services">Services</Link>
-                <Link to="/about">About Me</Link>
-            </div>
-            {/* <Link to="/nonsense" className='flexItem'>404</Link> */}
-        </div>
-    )
+	return (
+		<>
+			<ul className='linkList'>
+				<li>
+					<Link to='/'>Home</Link>
+				</li>
+				<li>
+					<Link to='/about'>About Me</Link>
+				</li>
+				<li>
+					<Link to='/portfolio'>Portfolio</Link>
+				</li>
+				{/* <li><Link to="/admin">Admin</Link></li> */}
+				{/* <li><Link to="/project">Project</Link></li> */}
+				<li>
+					<Link to='/services'>Services</Link>
+				</li>
+				{/* <li><Link to="/nonsense" className='flexItem'>404</Link></li> */}
+			</ul>
+		</>
+	);
 }
