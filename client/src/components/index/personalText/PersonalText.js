@@ -29,7 +29,10 @@ export default function PersonalText() {
 					<i className='fas fa-phone' /> 1(951) 805-3811
 				</li>
 				<li>
-					<a href='mailto:jamesmichaelstacy@gmail.com'>
+					<a
+						href='mailto:jamesmichaelstacy@gmail.com'
+						target='_blank'
+					>
 						<i className='fas fa-envelope' />{' '}
 						JamesMichaelStacy@gmail.com
 					</a>
@@ -38,18 +41,36 @@ export default function PersonalText() {
 			<ul className='list social'>
 				<h3>Professional Social Media:</h3>
 				<li>
-					<a href='https://www.facebook.com/jmswebdesigns/'>
+					<a
+						href='https://www.facebook.com/jmswebdesigns/'
+						target='_blank'
+					>
 						<i className='fab fa-facebook' /> Facebook
+					</a>
+					{'  '}| {'  '}
+					<a href='https://m.me/jmswebdesigns' target='_blank'>
+						<i className='fab fa-facebook-messenger' /> Messenger
 					</a>
 				</li>
 				<li>
-					<a href='https://github.com/SirHexxus'>
+					<a href='https://github.com/SirHexxus' target='_blank'>
 						<i className='fab fa-github' /> Github
 					</a>
 				</li>
 				<li>
-					<a href='https://www.linkedin.com/in/james-m-stacy'>
+					<a
+						href='https://www.linkedin.com/in/james-m-stacy'
+						target='_blank'
+					>
 						<i className='fab fa-linkedin' /> LinkedIn
+					</a>
+				</li>
+				<li>
+					<a
+						href='https://twitter.com/JamesSt77096668'
+						target='_blank'
+					>
+						<i className='fab fa-twitter' /> Twitter
 					</a>
 				</li>
 			</ul>
