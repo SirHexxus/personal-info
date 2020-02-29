@@ -55,7 +55,9 @@ export default class Project extends Component {
 					<ul className='flexCol'>
 						{deployedURL ? (
 							<li>
-								<a href={deployedURL}>See It Live</a>
+								<a href={deployedURL} target='_blank'>
+									See It Live
+								</a>
 							</li>
 						) : (
 							<li>
@@ -63,7 +65,9 @@ export default class Project extends Component {
 							</li>
 						)}
 						<li>
-							<a href={repoURL}>See The Source Code</a>
+							<a href={repoURL} target='_blank'>
+								See The Source Code
+							</a>
 						</li>
 						<br />
 						<li>
