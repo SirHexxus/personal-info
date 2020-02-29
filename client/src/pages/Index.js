@@ -10,8 +10,30 @@ export default function Index() {
 					<span>Full-Stack Web and Mobile Development</span>
 				</h4>
 			</div>
-			<div className='card accentDark'>
-				<h2>Click The Links Above For More Information</h2>
+			<div className='card dark'>
+				<h3 className='card'>
+					As a full stack developer for web and mobile business
+					applications, We:
+				</h3>
+				<ul>
+					<li className='card'>
+						- Specialize in React front end applications and
+						Node.js/Express back end applications.
+					</li>
+					{/* <hr /> */}
+					<li className='card'>
+						- Utilize React Native to create a single codebase for
+						both Android and IOS Mobile Applications.
+					</li>
+					{/* <hr /> */}
+					<li className='card'>
+						- Leverage our entrepreneurial, business, and industrial
+						experience to maximize the service we provide.
+					</li>
+				</ul>
+				<h2 className='card accentDark centered'>
+					Please Click The Links In the Navbar For More Information
+				</h2>
 			</div>
 		</div>
 	);
