@@ -64,11 +64,19 @@ export default class Project extends Component {
 								<p>No Deployment Link (See Description)</p>
 							</li>
 						)}
-						<li>
-							<a href={repoURL} target='_blank'>
-								See The Source Code
-							</a>
-						</li>
+						{repoURL ? (
+							<li>
+								<a href={repoURL} target='_blank'>
+									See The Source Code
+								</a>
+							</li>
+						) : (
+							<li>
+								<p>
+									No Repo/Source Code Link (See Description)
+								</p>
+							</li>
+						)}
 						<br />
 						<li>
 							<a href='/portfolio'>← Back To Portfolio</a>

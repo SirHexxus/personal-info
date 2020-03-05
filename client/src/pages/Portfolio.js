@@ -56,10 +56,6 @@ export default class Portfolio extends Component {
 			<div className='pageCol card portfolio'>
 				{projects.length > 0 ? (
 					<div className='card dark flexCol'>
-						{/* <div
-							className='card accentDark'
-							style={{ marginBottom: 0 }}
-						> */}
 						<h1 className='name'>Featured Projects</h1>
 						<h4 className='title' style={{ marginBottom: 0 }}>
 							<span>
@@ -67,7 +63,6 @@ export default class Portfolio extends Component {
 								Projects
 							</span>
 						</h4>
-						{/* </div> */}
 						<List>
 							{projects.map(project => (
 								<ListItem key={project._id} project={project} />

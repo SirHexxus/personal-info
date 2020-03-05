@@ -48,7 +48,7 @@ hr {
 
 .flexCol {
 	@include flexing(column, center, space-around);
-	margin: 3rem;
+	// margin: 3rem;
 }
 
 .flexRow {
